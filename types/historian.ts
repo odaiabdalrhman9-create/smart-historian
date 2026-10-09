@@ -1,3 +1,4 @@
+
 export type ReasoningLabel =
   | "تفسير قوي"
   | "تفسير جزئي"
@@ -9,20 +10,48 @@ export type ReasoningLabel =
   | "لم تُقدَّم إجابة";
 
 export type Cause = {
-  id: string; title: string; category: string; description: string;
-  importance: string; relatedEvent: string; evidence: string[]; source: string;
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  importance: string;
+  relatedEvent: string;
+  evidence: string[];
+  source: string;
 };
 
 export type Consequence = {
-  id: string; title: string; type: string; description: string; evidence: string[]; source: string;
+  id: string;
+  title: string;
+  type: string;
+  description: string;
+  evidence: string[];
+  source: string;
 };
 
-export type Node = { id: string; title: string; type: string; description: string; };
+export type Node = {
+  id: string;
+  title: string;
+  type: string;
+  description: string;
+};
 
-export type WhatIf = { id: string; question: string; options: string[]; };
+export type WhatIf = {
+  id: string;
+  question: string;
+  options: string[];
+};
 
 export type Lesson = {
-  id: string; subject: string; grade: string; unit: string; title: string;
-  description: string; event: string; causes: Cause[]; consequences: Consequence[];
-  nodes: Node[]; whatIf: WhatIf[];
+  id: string;
+  subject: string;
+  grade: string;
+  unit: string;
+  title: string;
+  description: string;
+  event: string;
+  causes: Cause[];
+  consequences: Consequence[];
+  nodes: Node[];
+  whatIf: WhatIf[];
 };
